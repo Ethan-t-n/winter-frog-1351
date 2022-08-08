@@ -1,0 +1,17 @@
+<%# <h1>Garden Show Page</h1> %>
+<%# <h2><%= @garden.name %></h2> %>
+<%# <p><strong>Ready to Harvest in less than 100 days:</strong></p> %>
+<%# <% @garden.distinct_plants.each do |plant| %> %>
+  <%# <p><%= plant.name %></p> %>
+<%# <% end %> %>
+
+<h3>Garden: <%= @garden.name %> </h3>
+<div id="plants">
+<% @garden.distinct_plants.each do |plant| %>
+    <div class="plant">
+    <p>Name: <%= plant.name %></p>
+    <p>Days to harvest: <%= plant.days_to_harvest %></p>
+    <p>Plant count: <%= plant.count %></p>
+    </div>
+<% end %>
+</div>
